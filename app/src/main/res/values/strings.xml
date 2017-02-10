@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">PizzaOrder</string>
     <string name="small_pizza">Small Pizza</string>
+    <string name="medium_pizza">Medium Pizza</string>
+    <string name="large_pizza">Large Pizza</string>
+    <string-array name="pizza_type">
+        <item>Pepperoni</item>
+        <item>Sausage</item>
+        <item>Cheese</item>
+        <item>Canadian Bacon</item>
+        <item>Chicken Alfredo</item>
+        <item>Supreme</item>
+        <item>Hawaiian</item>
+        <item>Meat Lovers</item>
+    </string-array>
+
 </resources>

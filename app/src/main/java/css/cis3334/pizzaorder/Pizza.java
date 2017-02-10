@@ -22,13 +22,13 @@ public class Pizza {
         this.extraCheese = extraCheese;
         if (size==pizzaSize.SMALL) {
             price = SMALL_PRICE;
-            description = "Small " + topping + " pizza";
+            description = " Small " + topping + " pizza";
         } else if (size==pizzaSize.MEDIUM) {
             price = MEDIUM_PRICE;
-            description = "Small " + topping + " pizza";
+            description = " Medium " + topping + " pizza";
         } else {
             price = LARGE_PRICE;
-            description = "Small " + topping + " pizza";
+            description = " Large " + topping + " pizza";
         }
         if (extraCheese) {
             price += EXTRA_CHEESE_PRICE;;
