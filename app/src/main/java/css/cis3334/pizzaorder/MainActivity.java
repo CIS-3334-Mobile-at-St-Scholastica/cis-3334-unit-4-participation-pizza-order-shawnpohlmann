@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements updateViewInterfa
     TextView txtStatus;
     PizzaOrderInterface pizzaOrderSystem;
     boolean cheese = false;
+    boolean delivery = false;
     String strsize;
     Spinner spinner;
     String topping;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements updateViewInterfa
     }
 
     public void onClickOrder(View view) {
+        pizzaOrderSystem.setDelivery(chkbxDelivery.isChecked());
         if (chkbxCheese.isChecked()) {
             cheese = true;
         }
@@ -69,9 +71,12 @@ public class MainActivity extends AppCompatActivity implements updateViewInterfa
             txtStatus.setText("Please Select your size of pizza.");
         }
 
+
+
         topping = spinner.getSelectedItem().toString();
 
         String orderDescription = pizzaOrderSystem.OrderPizza(topping ,strsize, cheese);
+
         //display a pop up message for a long period of time
         Toast.makeText(getApplicationContext(), "You have ordered a "+orderDescription , Toast.LENGTH_LONG).show();
         txtTotal.setText("Total Due: " + pizzaOrderSystem.getTotalBill().toString());

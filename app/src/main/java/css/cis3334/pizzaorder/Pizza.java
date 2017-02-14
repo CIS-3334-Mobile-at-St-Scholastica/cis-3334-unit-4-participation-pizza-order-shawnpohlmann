@@ -34,6 +34,7 @@ public class Pizza {
             price += EXTRA_CHEESE_PRICE;;
             description += " with extra cheese";
         }
+
     }
 
     public Double getPrice() {

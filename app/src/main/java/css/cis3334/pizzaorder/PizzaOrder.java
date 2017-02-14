@@ -43,13 +43,13 @@ public class PizzaOrder implements PizzaOrderInterface {
     public Double getTotalBill() {
         Double total = 0.0;
         for (Pizza p:pizzasInOrder ){
-            total += p.getPrice();
+            total = p.getPrice();
         }
         if (delivery) {
             total += DELIVERY_PRICE;
         }
         return total;
-    }
+    } 
 
     @Override
     public Double getSmallPrice () {
@@ -77,9 +77,7 @@ public class PizzaOrder implements PizzaOrderInterface {
     }
 
     @Override
-    public boolean getDelivery() {
-        return delivery;
-    }
+    public boolean getDelivery() { return delivery; }
 
     static Integer timer = 0;
     public void startPizzaTimer(){
